@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
+:root {
+    --bg-color-light: rgb(255, 239, 204);
+    --text-color-light: rgb(70, 70, 70);
+    --highlight-color-light: rgb(255, 166, 77);
+    --bg-color-dark: rgb(34, 34, 34);
+    --text-color-dark: rgb(255, 255, 255);
+    --highlight-color-dark: rgb(255, 166, 77);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -19,18 +28,19 @@ body {
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
-    background-color: rgb(255, 239, 204);
-    color: rgb(70, 70, 70);
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.5s, color 0.5s;
 }
 
 header {
     margin-top: 20px;
-    position: smooth;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 1rem 9%;
-    background-color: rgb(255, 239, 204);
+    background-color: var(--bg-color-light);
     opacity: .9;
     filter: drop-shadow(10px);
     display: flex;
@@ -38,32 +48,24 @@ header {
     align-items: center;
     z-index: 100;
 }
-.css-activities {
-    font-size: 3.5rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+
+.css-activities,
+#intro {
     font-size: 1.6rem;
-    color: rgb(70, 70, 70);
+    margin: 2rem 0;
+    color: var(--text-color-light);
     line-height: 1.6;
     font-weight: bold;
     font-style: italic;
-    color: rgb(255, 166, 77);
 }
 
-#intro {
-    font-size: 3.5rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    font-size: 1.6rem;
-    color: rgb(70, 70, 70);
-    line-height: 1.6;
-    font-weight: bold;
-    font-style: italic;
+.css-activities {
+    color: var(--highlight-color-light);
 }
 
 .logo {
     font-size: 3rem;
-    color: rgb(255, 166, 77);
+    color: var(--highlight-color-light);
     font-weight: 800;
     cursor: pointer;
     transition: 0.5s ease;
@@ -79,7 +81,7 @@ nav {
 
 nav a {
     font-size: 1.8rem;
-    color: rgb(70, 70, 70);
+    color: var(--text-color-light);
     margin-left: 4rem;
     font-weight: 500;
     transition: 0.3s ease;
@@ -88,8 +90,8 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    color: rgb(255, 166, 77);
-    border-bottom: 3px solid rgb(255, 166, 77);
+    color: var(--highlight-color-light);
+    border-bottom: 3px solid var(--highlight-color-light);
 }
 
 section {
@@ -102,7 +104,7 @@ section {
     justify-content: center;
     align-items: center;
     gap: 8rem;
-    background-color: rgb(255, 239, 204);
+    background-color: var(--bg-color-light);
 }
 
 .home .home-content h1 {
@@ -112,7 +114,7 @@ section {
 }
 
 span {
-    color: rgb(255, 166, 77);
+    color: var(--highlight-color-light);
 }
 
 .home-content h3 {
@@ -133,7 +135,7 @@ span {
     position: relative;
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px rgb(255, 166, 77);
+    box-shadow: 0 0 25px var(--highlight-color-light);
     cursor: pointer;
     transition: 0.2s linear;
 }
@@ -149,40 +151,40 @@ span {
     width: 4rem;
     height: 4rem;
     background-color: transparent;
-    border: 0.2rem solid rgb(255, 166, 77);
+    border: 0.2rem solid var(--highlight-color-light);
     font-size: 2rem;
     border-radius: 50%;
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease;
-    color: rgb(255, 166, 77);
+    color: var(--highlight-color-light);
 }
 
 .social-icon a:hover {
-    color: rgb(255, 239, 204);
+    color: var(--bg-color-light);
     transform: scale(1.3) translateY(-5px);
-    background-color: rgb(255, 166, 77);
-    box-shadow: 0 0 25px rgb(255, 166, 77);
+    background-color: var(--highlight-color-light);
+    box-shadow: 0 0 25px var(--highlight-color-light);
 }
 
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;
-    background-color: rgb(255, 239, 204);
+    background-color: var(--bg-color-light);
     border-radius: 4rem;
     font-size: 1.6rem;
-    color: rgb(255, 166, 77);
+    color: var(--highlight-color-light);
     letter-spacing: 0.3rem;
     font-weight: 600;
-    border: 2px solid rgb(255, 166, 77);
+    border: 2px solid var(--highlight-color-light);
     transition: 0.3s ease;
     cursor: pointer;
 }
 
 .btn:hover {
     transform: scale3d(1.03);
-    background-color: rgb(255, 166, 77);
-    color: rgb(255, 239, 204);
-    box-shadow: 0 0 25px rgb(255, 166, 77);
+    background-color: var(--highlight-color-light);
+    color: var(--bg-color-light);
+    box-shadow: 0 0 25px var(--highlight-color-light);
 }
 
 .typing-text {
@@ -197,24 +199,24 @@ span {
 
 .typing-text span::before {
     content: "Student Developer";
-    color: rgb(255, 166, 77);
+    color: var(--highlight-color-light);
     animation: words 20s infinite;
 }
 
 .typing-text span::after {
     content: "";
-    background-color: rgb(255, 239, 204);
+    background-color: var(--bg-color-light);
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
-    border-left: 3px solid rgb(255, 239, 204);
+    border-left: 3px solid var(--bg-color-light);
     right: -8;
     animation: cursor 0.6s infinite;
 }
 
 @keyframes cursor {
     to {
-        border-left: 3px solid rgb(255, 166, 77);
+        border-left: 3px solid var(--highlight-color-light);
     }
 }
 
@@ -233,7 +235,7 @@ span {
 .about-me {
     background-color: rgb(255, 224, 189);
     padding: 5rem 9%;
-    color: rgb(70, 70, 70);
+    color: var(--text-color-light);
 }
 
 .about-me h2 {
@@ -253,7 +255,7 @@ span {
 }
 
 .projects {
-    background-color: rgb(255, 239, 204);
+    background-color: var(--bg-color-light);
     padding: 5rem 9%;
 }
 
@@ -279,7 +281,7 @@ span {
 .favorites {
     background-color: rgb(255, 224, 189);
     padding: 5rem 9%;
-    color: rgb(70, 70, 70);
+    color: var(--text-color-light);
 }
 
 .favorites h2 {
@@ -307,6 +309,11 @@ span {
 
 #fav-vid {
     width: 100%;
+}
+
+.toggle-iframe {
+    width: 100%;
+    height: 60px;
 }
 
 @media (max-width: 1000px) {
@@ -340,8 +347,8 @@ span {
         top: 0;
         right: 0;
         width: 40%;
-        border-left: 3px solid rgb(255, 166, 77);
-        border-bottom: 3px solid rgb(255, 166, 77);
+        border-left: 3px solid var(--highlight-color-light);
+        border-bottom: 3px solid var(--highlight-color-light);
         border-bottom-left-radius: 2rem;
         padding: 1rem solid;
         background-color: rgb(255, 224, 189);
@@ -362,7 +369,7 @@ span {
     nav a.active {
         padding: 1rem;
         border-radius: 0.5rem;
-        border-bottom: 0.5rem solid rgb(255, 166, 77);
+        border-bottom: 0.5rem solid var(--highlight-color-light);
     }
 }
 
@@ -370,4 +377,74 @@ span {
     .project-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+header.dark-mode {
+    background-color: var(--bg-color-dark);
+}
+
+.css-activities.dark-mode,
+#intro.dark-mode {
+    color: var(--text-color-dark);
+}
+
+.logo.dark-mode {
+    color: var(--highlight-color-dark);
+}
+
+nav a.dark-mode {
+    color: var(--text-color-dark);
+}
+
+nav a:hover.dark-mode,
+nav a.active.dark-mode {
+    color: var(--highlight-color-dark);
+    border-bottom: 3px solid var(--highlight-color-dark);
+}
+
+.home.dark-mode {
+    background-color: var(--bg-color-dark);
+}
+
+.social-icon a.dark-mode {
+    border: 0.2rem solid var(--highlight-color-dark);
+    color: var(--highlight-color-dark);
+}
+
+.btn.dark-mode {
+    background-color: var(--bg-color-dark);
+    border: 2px solid var(--highlight-color-dark);
+    color: var(--highlight-color-dark);
+}
+
+.btn.dark-mode:hover {
+    background-color: var(--highlight-color-dark);
+    color: var(--bg-color-dark);
+}
+
+.about-me.dark-mode,
+.projects.dark-mode,
+.favorites.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+.project-item img.dark-mode,
+.favorite-item img.dark-mode {
+    border-radius: 10px;
+}
+
+.favorite-item h3.dark-mode,
+.favorite-item p.dark-mode {
+    color: var(--text-color-dark);
+}
+
+.toggle-iframe.dark-mode {
+    background-color: var(--bg-color-dark);
 }
