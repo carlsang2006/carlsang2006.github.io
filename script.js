@@ -12,8 +12,8 @@ const toggleIframe = document.querySelector('.toggle-iframe');
 toggleButton.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
     toggleButton.innerHTML = body.classList.contains('dark-mode') 
-        ? '<i class="fa-solid fa-moon"></i>' 
-        : '<i class="fa-solid fa-sun"></i>';
+        ? 'Change Mode<i class="fa-solid fa-moon"></i>' 
+        : 'Change Mode<i class="fa-solid fa-sun"></i>';
 
     if (body.classList.contains('dark-mode')) {
         navLinks.forEach(link => link.classList.add('dark-mode'));

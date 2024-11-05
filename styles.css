@@ -34,18 +34,17 @@ body {
 }
 
 header {
-    margin-top: 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: auto;
     padding: 1rem 9%;
     background-color: var(--bg-color-light);
-    opacity: .9;
-    filter: drop-shadow(10px);
+    opacity: 0.9;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     z-index: 100;
 }
 
@@ -64,28 +63,43 @@ header {
 }
 
 .logo {
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: bold;
     color: var(--highlight-color-light);
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.5s ease;
+    text-decoration: none;
+    margin-right: 1rem;
 }
 
 .logo:hover {
     transform: scale(1.1);
 }
 
+.theme-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+    margin-left: 1rem;
+    transition: color 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.5);
+}
+
 nav {
     display: flex;
+    gap: 2rem;
+    align-items: center;
 }
 
 nav a {
-    font-size: 1.8rem;
+    text-decoration: none;
     color: var(--text-color-light);
-    margin-left: 4rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
+    font-size: 2rem;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem
 }
 
 nav a:hover,
@@ -199,13 +213,11 @@ span {
 
 .typing-text span::before {
     content: "Student Developer";
-    color: var(--highlight-color-light);
     animation: words 20s infinite;
 }
 
 .typing-text span::after {
     content: "";
-    background-color: var(--bg-color-light);
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
