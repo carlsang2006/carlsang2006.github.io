@@ -7,6 +7,7 @@
     --bg-color-dark: rgb(34, 34, 34);
     --text-color-dark: rgb(255, 255, 255);
     --highlight-color-dark: rgb(255, 166, 77);
+    --text--color-dark: rgb(255, 255, 255);
 }
 
 * {
@@ -82,10 +83,6 @@ header {
     color: black;
     margin-left: 1rem;
     transition: color 0.3s;
-}
-
-.theme-toggle:hover {
-    transform: scale(1.5);
 }
 
 nav {
@@ -411,12 +408,13 @@ header.dark-mode {
 }
 
 nav a.dark-mode {
-    color: var(--text-color-dark);
+    color: var(--bg-color-dark);
 }
 
-nav a:hover.dark-mode,
-nav a.active.dark-mode {
+nav a:hover.dark-mode{
     color: var(--highlight-color-dark);
+}
+nav a.active.dark-mode {
     border-bottom: 3px solid var(--highlight-color-dark);
 }
 
@@ -426,7 +424,6 @@ nav a.active.dark-mode {
 
 .social-icon a.dark-mode {
     border: 0.2rem solid var(--highlight-color-dark);
-    color: var(--highlight-color-dark);
 }
 
 .btn.dark-mode {
