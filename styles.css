@@ -543,7 +543,7 @@ nav a.active.dark-mode {
 }
 
 .menu-toggle.dark-mode,
-.nav-links2.dark-mode  {
+.nav-links.dark-mode {
     background-color: var(--bg-color-dark);
     color: var(--text-color-dark);
 }

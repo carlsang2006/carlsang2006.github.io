@@ -42,7 +42,7 @@ toggleButton.addEventListener("click", () => {
     projectImages.forEach((image) => image.classList.remove("dark-mode"));
     toggleIframe.classList.remove("dark-mode");
     menutoggle.classList.remove("dark-mode");
-    navLinks2.classList.remove("dark-mode");
+    navLinks2.forEach.remove("dark-mode");
   }
 });
 
