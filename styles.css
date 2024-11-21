@@ -7,7 +7,9 @@
     --bg-color-dark: rgb(34, 34, 34);
     --text-color-dark: rgb(255, 255, 255);
     --highlight-color-dark: rgb(255, 166, 77);
-    --text--color-dark: rgb(255, 255, 255);
+}
+html{
+    scroll-behavior: smooth;    
 }
 
 * {
@@ -48,6 +50,23 @@ header {
     justify-content: space-between;
     z-index: 100;
 }
+#repo-list div {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  #repo-list h3 {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  #repo-list a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  #repo-list a:hover {
+    text-decoration: underline;
+  }
 
 .css-activities,
 #intro {
@@ -57,6 +76,9 @@ header {
     line-height: 1.6;
     font-weight: bold;
     font-style: italic;
+}
+.menu-toggle {
+    display: none;
 }
 
 .css-activities {
@@ -153,6 +175,16 @@ span {
 
 .home-img img:hover {
     transform: scale(1.05);
+}
+
+.game-img {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    height: 200px;
+    gap: 2rem;
+    cursor: pointer;
+    transition: 0.2s linear;
 }
 
 .social-icon a {
@@ -332,6 +364,18 @@ span {
 }
 
 @media (max-width: 995px) {
+
+    .menu-toggle {
+        display: block;
+        background-color: var(--highlight-color-light);
+        color: var(--bg-color-light);
+        border: none;
+        border-radius: 3px;
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease; 
+    }
     .home {
         flex-direction: column;
         margin: 5rem 4rem;
@@ -363,23 +407,21 @@ span {
         background-color: rgb(255, 224, 189);
         border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
     }
-
-    nav.active {
-        display: block;
-    }
-
-    nav a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
-
-    nav a:hover,
-    nav a.active {
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid var(--highlight-color-light);
-    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      }
+    
+      .nav-links.show {
+        display: flex;
+      }
 }
 
 @media (max-width: 600px) {
@@ -456,4 +498,14 @@ nav a.active.dark-mode {
 
 .toggle-iframe.dark-mode {
     background-color: var(--bg-color-dark);
+}
+
+.menu-toggle.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+.nav-links2.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
 }
