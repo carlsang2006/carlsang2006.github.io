@@ -500,12 +500,8 @@ nav a.active.dark-mode {
     background-color: var(--bg-color-dark);
 }
 
-.menu-toggle.dark-mode {
-    background-color: var(--bg-color-dark);
-    color: var(--text-color-dark);
-}
-
-.nav-links2.dark-mode {
+.menu-toggle.dark-mode,
+.nav-links2.dark-mode  {
     background-color: var(--bg-color-dark);
     color: var(--text-color-dark);
 }
