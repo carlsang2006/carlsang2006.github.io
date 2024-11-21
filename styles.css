@@ -364,7 +364,6 @@ span {
 }
 
 @media (max-width: 995px) {
-
     .menu-toggle {
         display: block;
         background-color: var(--highlight-color-light);
@@ -374,26 +373,22 @@ span {
         padding: 0.5rem 1rem;
         font-size: 1.5rem;
         cursor: pointer;
-        transition: background-color 0.3s ease; 
+        transition: background-color 0.3s ease;
     }
     .home {
         flex-direction: column;
         margin: 3rem 2rem;
     }
-
     .home .home-content h3 {
         font-size: 2.5rem;
     }
-
     .home-content h1 {
         font-size: 4rem;
     }
-
     .home-img img {
         width: 100%;
         margin-top: 2rem;
     }
-
     nav {
         position: absolute;
         display: none;
@@ -417,15 +412,20 @@ span {
         width: 150px;
         padding: 10px 0;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-      }
-    
-      .nav-links.show {
+    }
+    .nav-links.show {
         display: flex;
-      }
-      .game-img {
+    }
+    .game-img {
         width: 100%;
         margin-top: 2rem;
         flex-direction: column;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 995px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -439,11 +439,9 @@ span {
     .home-content h1 {
         font-size: 3rem;
     }
-
     .home .home-content h3 {
         font-size: 2rem;
     }
-
     .home-img img {
         width: 100%;
     }
@@ -461,11 +459,9 @@ span {
     .home-content h1 {
         font-size: 2rem;
     }
-
     .home .home-content h3 {
         font-size: 1.5rem;
     }
-
     .home-img img {
         width: 100%;
     }
