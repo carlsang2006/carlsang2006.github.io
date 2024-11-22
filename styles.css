@@ -177,16 +177,6 @@ span {
     transform: scale(1.05);
 }
 
-.game-img {
-    display: flex;
-    flex-direction: row;
-    width: 500px;
-    height: 200px;
-    gap: 2rem;
-    cursor: pointer;
-    transition: 0.2s linear;
-}
-
 .social-icon a {
     display: inline-flex;
     justify-content: center;
@@ -416,11 +406,7 @@ span {
     .nav-links.show {
         display: flex;
     }
-    .game-img {
-        width: 100%;
-        margin-top: 2rem;
-        flex-direction: column;
-    }
+
 }
 
 @media (min-width: 600px) and (max-width: 995px) {
@@ -445,11 +431,6 @@ span {
     .home-img img {
         width: 100%;
     }
-    .game-img {
-        width: 100%;
-        margin-top: 2rem;
-        flex-direction: column;
-    }
 }
 
 @media (max-width: 400px) {
@@ -464,11 +445,7 @@ span {
     }
     .home-img img {
         width: 100%;
-    }
-    .game-img {
-        width: 100%;
-        margin-top: 1rem;
-        flex-direction: column;
+    }ex-direction: column;
     }
 }
 
