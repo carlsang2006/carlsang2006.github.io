@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -128,76 +128,4 @@
     </section>
     <script src="script.js"></script>
 </body>
-</html> -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Proposal</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #ffe6e6;
-            font-family: Arial, sans-serif;
-            flex-direction: column;
-        }
-        .container {
-            text-align: center;
-        }
-        h1 {
-            color: #ff4d4d;
-        }
-        .buttons {
-            margin-top: 20px;
-        }
-        .btn {
-            font-size: 18px;
-            padding: 10px 20px;
-            margin: 10px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-        #yes {
-            background-color: #ff4d4d;
-            color: white;
-        }
-        #no {
-            background-color: #666;
-            color: white;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Will you be my Valentine? 💖</h1>
-        <div class="buttons">
-            <button id="yes" class="btn" onclick="sayYes()">Yes</button>
-            <button id="no" class="btn" onclick="growYes()">No</button>
-        </div>
-    </div>
-
-    <script>
-        let yesBtn = document.getElementById("yes");
-        let noBtn = document.getElementById("no");
-        let yesSize = 18;
-
-        function growYes() {
-            yesSize += 10;
-            yesBtn.style.fontSize = yesSize + "px";
-            yesBtn.style.padding = (yesSize / 2) + "px " + (yesSize * 1.2) + "px";
-        }
-
-        function sayYes() {
-            alert("Thank you, looking forward to our date! 💕");
-        }
-    </script>
-</body>
 </html>
-
